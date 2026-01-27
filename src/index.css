@@ -1,0 +1,210 @@
+/* ================================
+   Tailwind Reference (para Tailwind 4)
+================================ */
+@reference "tailwindcss";
+
+/* ================================
+   Tailwind Directives
+================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   BASE TOKENS (CSS VARIABLES)
+================================ */
+@layer base {
+  :root {
+    /* Atos Hub Brand Colors */
+    --atos-blue: 233 45% 24%;
+    --atos-blue-deep: 235 47% 17%;
+    --atos-blue-institutional: 220 48% 17%;
+    --atos-gold: 27 46% 70%;
+    --atos-gold-dark: 27 46% 55%;
+    --atos-neutral: 0 0% 95%;
+    --atos-neutral-dark: 0 0% 90%;
+
+    /* Semantic tokens */
+    --background: 0 0% 100%;
+    --foreground: 235 47% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 235 47% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 47% 17%;
+
+    --primary: 233 45% 24%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 235 47% 17%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 233 20% 45%;
+
+    --accent: 27 46% 70%;
+    --accent-foreground: 235 47% 17%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 85%;
+    --input: 220 13% 85%;
+    --ring: 27 46% 70%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(235 47% 17%) 0%,
+      hsl(233 45% 24%) 50%,
+      hsl(220 48% 17%) 100%
+    );
+
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(27 46% 70%) 0%,
+      hsl(27 46% 55%) 100%
+    );
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(235 47% 17% / 0.08);
+    --shadow-md: 0 8px 24px -4px hsl(235 47% 17% / 0.12);
+    --shadow-lg: 0 16px 48px -8px hsl(235 47% 17% / 0.16);
+    --shadow-gold: 0 8px 32px -4px hsl(27 46% 70% / 0.4);
+  }
+
+  .dark {
+    --background: 235 47% 12%;
+    --foreground: 0 0% 95%;
+
+    --card: 235 47% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 235 47% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 27 46% 70%;
+    --primary-foreground: 235 47% 17%;
+
+    --secondary: 235 30% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 235 30% 20%;
+    --muted-foreground: 220 13% 65%;
+
+    --accent: 27 46% 70%;
+    --accent-foreground: 235 47% 17%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 235 30% 25%;
+    --input: 235 30% 25%;
+    --ring: 27 46% 70%;
+  }
+}
+
+/* ================================
+   GLOBAL BASE STYLES
+================================ */
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: theme(fontFamily.sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: theme(fontFamily.serif);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ================================
+   COMPONENTS
+================================ */
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient-gold {
+    background-image: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .card-elevated {
+    background-color: hsl(var(--card));
+    border-radius: var(--radius);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium transition-all duration-300;
+    background: var(--gradient-gold);
+    color: hsl(var(--atos-blue-deep));
+    box-shadow: var(--shadow-gold);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px -4px hsl(27 46% 70% / 0.5);
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 font-medium transition-all duration-300;
+    border: 2px solid hsl(0 0% 100% / 0.3);
+    color: white;
+  }
+
+  .btn-outline-light:hover {
+    background-color: hsl(0 0% 100% / 0.1);
+  }
+}
+
+/* ================================
+   UTILITIES
+================================ */
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+}
