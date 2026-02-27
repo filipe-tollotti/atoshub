@@ -3,8 +3,7 @@ import { Linkedin, Instagram, Mail } from "lucide-react";
 const footerLinks = {
   institucional: [
     { label: "Quem Somos", href: "#quem-somos" },
-    { label: "Como Funciona", href: "#como-funciona" },
-    { label: "Impacto & Responsabilidade", href: "#impacto" },
+    { label: "Como Funciona", href: "#como-funciona" }
   ],
   solucoes: [
     { label: "B2C", href: "#solucoes" },
@@ -26,25 +25,27 @@ export const Footer = () => {
                   Atos <span className="text-atos-gold">Hub</span>
                 </span>
               </div>
+              <p className="text-white text-sm mb-6 leading-relaxed">
+                ATOS HUB CONSULTORIA LTDA CNPJ: 65.255.783/0001-08
+              </p>
               <p className="text-white/60 text-sm mb-6 leading-relaxed">
-                Plataforma financeira multibancos que estrutura e distribui crédito 
-                com responsabilidade e eficiência.
+              Rua: Pedro Fagundes da Silva, 230 - Sala 104, Rio de Janeiro - RJ, 22021-025
               </p>
               <div className="flex gap-4">
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/company/atos-hub" 
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-atos-gold hover:text-atos-blue-deep transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a 
+                {/* <a 
                   href="#" 
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-atos-gold hover:text-atos-blue-deep transition-colors"
                 >
                   <Instagram className="h-5 w-5" />
-                </a>
+                </a> */}
                 <a 
-                  href="mailto:contato@atoshub.com.br" 
+                  href="mailto:atendimento@atoshub.com.br" 
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-atos-gold hover:text-atos-blue-deep transition-colors"
                 >
                   <Mail className="h-5 w-5" />

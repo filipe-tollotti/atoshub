@@ -163,14 +163,14 @@ export const ContactSection = ({
                     <div>
                       <p className="font-medium text-foreground">E-mail</p>
                       <a
-                        href="mailto:contato@atoshub.com.br"
+                        href="mailto:atendimento@atoshub.com.br"
                         className="text-muted-foreground hover:text-atos-gold-dark transition-colors"
                       >
-                        contato@atoshub.com.br
+                        atendimento@atoshub.com.br
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
+                  {/* <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-atos-gold/20 flex items-center justify-center flex-shrink-0">
                       <Phone className="h-5 w-5 text-atos-gold-dark" />
                     </div>
@@ -183,18 +183,7 @@ export const ContactSection = ({
                         (11) 4000-0000
                       </a>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-atos-gold/20 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-5 w-5 text-atos-gold-dark" />
-                    </div>
-                    <div>
-                      <p className="font-medium text-foreground">Endereço</p>
-                      <p className="text-muted-foreground">
-                        São Paulo, SP - Brasil
-                      </p>
-                    </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
