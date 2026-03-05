@@ -1,16 +1,16 @@
-import { Linkedin, Instagram, Mail } from "lucide-react";
+import {Linkedin, Instagram, Mail} from 'lucide-react'
 
 const footerLinks = {
   institucional: [
-    { label: "Quem Somos", href: "#quem-somos" },
-    { label: "Como Funciona", href: "#como-funciona" }
+    {label: 'Quem Somos', href: '#quem-somos'},
+    {label: 'Como Funciona', href: '#como-funciona'},
   ],
   solucoes: [
-    { label: "B2C", href: "#solucoes" },
-    { label: "B2B", href: "#solucoes" },
-    { label: "Parceiros", href: "#parceiros" },
-  ]
-};
+    {label: 'B2C', href: '#solucoes'},
+    {label: 'B2B', href: '#solucoes'},
+    {label: 'Parceiros', href: '#parceiros'},
+  ],
+}
 
 export const Footer = () => {
   return (
@@ -29,11 +29,12 @@ export const Footer = () => {
                 ATOS HUB CONSULTORIA LTDA CNPJ: 65.255.783/0001-08
               </p>
               <p className="text-white/60 text-sm mb-6 leading-relaxed">
-              Rua: Pedro Fagundes da Silva, 230 - Sala 104, Rio de Janeiro - RJ, 22021-025
+                Plataforma financeira multibancos que estrutura e disponibiliza crédito com
+                responsabilidade e eficiência.
               </p>
               <div className="flex gap-4">
-                <a 
-                  href="https://www.linkedin.com/company/atos-hub" 
+                <a
+                  href="https://www.linkedin.com/company/atos-hub"
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-atos-gold hover:text-atos-blue-deep transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
@@ -44,8 +45,8 @@ export const Footer = () => {
                 >
                   <Instagram className="h-5 w-5" />
                 </a> */}
-                <a 
-                  href="mailto:atendimento@atoshub.com.br" 
+                <a
+                  href="mailto:atendimento@atoshub.com.br"
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-atos-gold hover:text-atos-blue-deep transition-colors"
                 >
                   <Mail className="h-5 w-5" />
@@ -59,19 +60,19 @@ export const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.institucional.map((link) => (
                   <li key={link.label}>
-                    <a 
-                      href={link.href} 
+                    <a
+                      href={link.href}
                       onClick={(e) => {
-                        e.preventDefault();
-                        const element = document.querySelector(link.href);
+                        e.preventDefault()
+                        const element = document.querySelector(link.href)
                         if (element) {
-                          const headerOffset = 80;
-                          const elementPosition = element.getBoundingClientRect().top;
-                          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                          const headerOffset = 80
+                          const elementPosition = element.getBoundingClientRect().top
+                          const offsetPosition = elementPosition + window.pageYOffset - headerOffset
                           window.scrollTo({
                             top: offsetPosition,
-                            behavior: "smooth"
-                          });
+                            behavior: 'smooth',
+                          })
                         }
                       }}
                       className="text-white/60 hover:text-atos-gold transition-colors text-sm"
@@ -89,19 +90,19 @@ export const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.solucoes.map((link) => (
                   <li key={link.label}>
-                    <a 
-                      href={link.href} 
+                    <a
+                      href={link.href}
                       onClick={(e) => {
-                        e.preventDefault();
-                        const element = document.querySelector(link.href);
+                        e.preventDefault()
+                        const element = document.querySelector(link.href)
                         if (element) {
-                          const headerOffset = 80;
-                          const elementPosition = element.getBoundingClientRect().top;
-                          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                          const headerOffset = 80
+                          const elementPosition = element.getBoundingClientRect().top
+                          const offsetPosition = elementPosition + window.pageYOffset - headerOffset
                           window.scrollTo({
                             top: offsetPosition,
-                            behavior: "smooth"
-                          });
+                            behavior: 'smooth',
+                          })
                         }
                       }}
                       className="text-white/60 hover:text-atos-gold transition-colors text-sm"
@@ -112,8 +113,6 @@ export const Footer = () => {
                 ))}
               </ul>
             </div>
-
-          
           </div>
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-white/10">
@@ -126,5 +125,5 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
