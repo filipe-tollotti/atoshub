@@ -35,16 +35,18 @@ export const Footer = () => {
               <div className="flex gap-4">
                 <a
                   href="https://www.linkedin.com/company/atos-hub"
+                  target="_blank"
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-atos-gold hover:text-atos-blue-deep transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
                 </a>
-                {/* <a 
-                  href="#" 
+                <a
+                  href="https://www.instagram.com/atos_hub"
+                  target="_blank"
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-atos-gold hover:text-atos-blue-deep transition-colors"
                 >
                   <Instagram className="h-5 w-5" />
-                </a> */}
+                </a>
                 <a
                   href="mailto:atendimento@atoshub.com.br"
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-atos-gold hover:text-atos-blue-deep transition-colors"
